@@ -1,0 +1,8 @@
+# vi: ft=yaml
+---
+
+- name: Symlink .vimrc
+  file: "src={{ ansible_env.PWD }}/.vimrc dest=~/.vimrc state=link"
+
+- name: Symlink .vim
+  file: "src={{ ansible_env.PWD }}/.vim dest=~/.vim state=link"
